@@ -5,12 +5,12 @@ var app = express(); // here I use the express() method, instead of the createSe
   //res.send('Hello World');
 //});
 
-//app.set('view engine', 'html');
+app.set('view engine', 'html');
 
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
-  res.sendFile('index.html' , { root : __dirname});
+  res.sendFile('view/index.html' , { root : __dirname});
 })
 
 var server = app.listen(3000, function() {
